@@ -39,10 +39,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts',
     'complaints',
-    'chats',
     'feedback',
-    'stats',
     'home',
+    'maps',
     'firstapp',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,11 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'django_otp',
-    'django_otp.plugins.otp_totp',
-    'django_otp.plugins.otp_hotp',
-    'django_otp.plugins.otp_static',
 ]
 
 MIDDLEWARE = [
