@@ -38,5 +38,7 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = (
-            'phone_no',
+            'contact1',
+            'contact2',
+            'contact3',
         )

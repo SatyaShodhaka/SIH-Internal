@@ -34,14 +34,15 @@ def edit_profile(request):
         form_user = ProfileUpdateForm(request.POST,\
                                     request.FILES,\
                                     instance = request.user.userprofile)
-        if form.is_valid() and form_user.is_valid:
+        if form.is_valid and form_user.is_valid:
             form.save()
             form_user.save()
             return redirect('/account/')
     else:
         form = UserUpdateForm(instance=request.user)
         form_user = ProfileUpdateForm(instance = request.user.userprofile)
-    args = {'form': form,'form_user': form_user}
+        args = {'form': form,'form_user': form_user}
+
     return render(request,'accounts/edit_profile.html',args)
 
 @login_required   

@@ -59,6 +59,12 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Feedback</a>
           </li>
           {% if user.is_authenticated %}
+          {% comment %} <li class="nav-item">
+            <a class="nav-link " href="/account/profile">Profile</a>
+          </li> {% endcomment %}
+          <li class="nav-item">
+            <a class="nav-link " href="/account/profile/edit">Edit Profile</a>
+          </li>
           <li class="nav-item">
               <a class="nav-link" href="/account/logout">Logout</a>
           </li>
@@ -79,8 +85,9 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">CYBER PORTAL</div>
-        <div class="intro-heading text-uppercase">We got you</div>
+        <div class="intro-lead-in" style="text-align:center;font-size:120px;font-style:normal;">Safer India</div>
+        <br>
+        <div class="intro-heading text-uppercase"style="font-size:50px;text-align:center">We got you</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
@@ -95,7 +102,7 @@
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
@@ -106,14 +113,14 @@
           </script>
           <p class="text-muted">Complaints reported on this portal are dealt by law enforcement agencies/ police based on the information available in the complaints. It is imperative to provide correct and accurate details while filing complaint for prompt action.</p>
         </div>
-        <div class="col-md-6">
+        {% comment %} <div class="col-md-12">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
           </span>
-          <a href='firstapp/counsel' style="color:black"><h4 class="service-heading">Counselling</h4></a>
+           <a href='firstapp/counsel' style="color:black"><h4 class="service-heading">Counselling</h4></a>
           <p class="text-muted">This portal is an initiative to facilitate victims online counselling. This portal caters to complaints pertaining to cyber crimes only with special focus on cyber crimes against women and children.</p>
-        </div>
+        </div> {% endcomment %}
         </div>
     </div>
   </section>
@@ -596,9 +603,18 @@
     <script>
          var heatMapData = [
 		  {location: new google.maps.LatLng(17.3457, 78.5522), weight: 100},
-		  {location: new google.maps.LatLng(17.4169, 78.4387), weight: 120},
-		  {location: new google.maps.LatLng(17.4399, 78.4983), weight: 120},
-      {location: new google.maps.LatLng(17.3807, 78.3245), weight: 120},
+        {location: new google.maps.LatLng(17.4169, 78.4387), weight: 120},
+        {location: new google.maps.LatLng(17.3984, 78.5583), weight: 120},
+        {location: new google.maps.LatLng(17.3958, 78.4912), weight: 120},
+        {location: new google.maps.LatLng(17.4875, 78.3953), weight: 60},
+        {location: new google.maps.LatLng(17.4178, 78.3890), weight: 80},
+        {location: new google.maps.LatLng(17.4447, 78.4664), weight: 100},
+        {location: new google.maps.LatLng(17.4629, 78.5609), weight: 170},
+        {location: new google.maps.LatLng(17.3630, 78.3943), weight: 160},
+        {location: new google.maps.LatLng(17.3413, 78.5316), weight: 180},
+        {location: new google.maps.LatLng(17.3120, 78.8636), weight: 200},
+        {location: new google.maps.LatLng(17.2543, 78.6808), weight: 140},
+        {location: new google.maps.LatLng(17.2403, 78.4294), weight: 20}
 		];
 		var Hyderabad = new google.maps.LatLng(17.3850, 78.4867);
 
